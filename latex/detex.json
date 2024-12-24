@@ -1,0 +1,12 @@
+[
+{"re": "\\\\PassOptionsToPackage{[^}]*}{[^}]*}", "sub": ""},
+{"re": "\\\\input{[^}]*}", "sub": ""},
+{"re": "\\\\href{[^}]*}", "sub": ""},
+{"re": "\\\\label{[^}]*}", "sub": ""},
+{"re": "\\\\hyperref[\\[][^]]*]", "sub": ""},
+{"re": "\\\\makeindex[\\[][^]]*]", "sub": ""},
+{"re": "\\\\printindex[\\[][^]]*]", "sub": ""},
+{"re": "\\\\excludecomment{[^}]*}", "sub": ""},
+{"re": "\\\\excludeversion{[^}]*}", "sub": ""},
+{"re":"\\\\NoSpellCheck{[^}]*}", "sub":""}
+]

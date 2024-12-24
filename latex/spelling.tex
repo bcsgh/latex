@@ -1,0 +1,11 @@
+%% Adds things to a Dictionary
+%% This is intended to interact with a spell checking test like @com_github_bcsgh_latex_rules//text:spelling.bzl
+
+\newwrite\dictFile
+\immediate\openout\dictFile=\jobname.dict
+
+\newcommand\AddToDictionary[1]{%
+  \immediate\write\dictFile{#1}%
+}
+
+\newcommand{\NoSpellCheck}[1]{#1}
