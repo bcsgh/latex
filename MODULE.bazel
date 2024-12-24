@@ -1,0 +1,4 @@
+module(
+    name = "com_github_bcsgh_latex_rules",
+    version = "0.0.1",
+)
