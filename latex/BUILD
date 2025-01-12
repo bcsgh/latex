@@ -4,8 +4,13 @@ load(":latex.bzl", "latex_toolchain")
 exports_files([
   "detex.json",
   "detex.py",
+  "git_stamp.bzl",
   "git_stamp.tpl",
+  "latex.bzl",
   "latex.py",
+  "ref_test.bzl",
+  "repo.bzl",
+  "role_call_test.bzl",
   "spelling.tex",
 ])
 

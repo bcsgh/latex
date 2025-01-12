@@ -25,6 +25,35 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
+"""
+# Bazle/skylark rule(s) to process LaTeX.
+
+## `MODULE.bazel`
+
+```
+bazel_dep(
+    name = "com_github_bcsgh_latex_rules",
+    version = ...,
+)
+```
+
+And either:
+
+```
+# Use ctx.which to look things up.
+latex_toolchain_repository = use_repo_rule("@com_github_bcsgh_latex_rules//latex:repo.bzl", "latex_toolchain_repository")
+latex_toolchain_repository(name="local_latex_toolchain")
+register_toolchains("@local_latex_toolchain//:local_latex")
+```
+
+Or:
+
+```
+# Blindly assumes default paths
+register_toolchains("@com_github_bcsgh_latex_rules//latex:linux_texlive")
+```
+"""
+
 _REPO_BUILD_TPL = """
 load("@com_github_bcsgh_latex_rules//latex:latex.bzl", "latex_toolchain")
 

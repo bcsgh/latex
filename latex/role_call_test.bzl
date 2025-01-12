@@ -25,7 +25,10 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
-"""Bazle/skylark rule(s) to test LaTeX builds."""
+"""
+# Bazle/skylark rule(s) to process LaTeX.
+"""
+
 def _role_call_test_impl(ctx):
     args = [ctx.attr._tool[DefaultInfo].files_to_run.executable.short_path]
     rundeps = [
